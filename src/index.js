@@ -21,11 +21,9 @@ app.use(async (req, res, next) => {
   if (!url) {
     return res.status(400).send('Search with url parameter. For eaxample, ?url=http://yourdomain')
   }
-
   if (!url.includes('://')) {
     url = `http://${url}`
   }
-
   try {
     switch (type) {
       case 'pdf':

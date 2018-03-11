@@ -19,6 +19,7 @@ class Renderer {
       if (['image', 'stylesheet', 'font'].indexOf(request.resourceType()) !== -1) {
         request.abort()
       } else {
+        console.log(request.url())
         request.continue()
       }
     })
